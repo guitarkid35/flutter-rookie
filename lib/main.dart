@@ -9,46 +9,82 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.deepOrange[900],
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: <Widget>[
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.white,
-                child: Text('Container1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('assets/images/head.jpeg'),
               ),
-              SizedBox(
-                width: 20.0,
+              Text(
+                'Garrick Chou',
+                style: TextStyle(
+                  fontFamily: 'Bangers',
+                  letterSpacing: 2.0,
+                  fontSize: 30.0,
+                  color: Colors.amber,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.blue,
-                    child: Text('Container2'),
-                  ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.amber,
-                    child: Text('Container3'),
-                  ),
-                ],
+              Text(
+                'UI/UX Designer',
+                style: TextStyle(
+                  fontFamily: 'Blinker',
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.w200,
+                  letterSpacing: 1.0,
+                  color: Colors.amber[50],
+                ),
               ),
-              SizedBox(
-                width: 20.0,
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.amber[50],
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.black54,
+                      size: 32.0,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+886 933 123 456',
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontFamily: 'Blinker',
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.green,
-                child: Text('Container4'),
-              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.amber[50],
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.mail,
+                      color: Colors.black54,
+                      size: 32.0,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'guitarkid35@gmail.com',
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontFamily: 'Blinker',
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
