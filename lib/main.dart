@@ -12,10 +12,14 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.deepOrange[900],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('assets/images/head.jpeg'),
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Text(
                 'Garrick Chou',
@@ -37,52 +41,49 @@ class MyApp extends StatelessWidget {
                   color: Colors.amber[50],
                 ),
               ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                color: Colors.amber[50],
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black54,
-                      size: 32.0,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+886 933 123 456',
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontFamily: 'Blinker',
-                        fontSize: 18.0,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.amber[50],
                 ),
               ),
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 color: Colors.amber[50],
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.mail,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.black54,
+                    size: 32.0,
+                  ),
+                  title: Text(
+                    '+886 933 123 456',
+                    style: TextStyle(
                       color: Colors.black54,
-                      size: 32.0,
+                      fontFamily: 'Blinker',
+                      fontSize: 18.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.amber[50],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.black54,
+                    size: 32.0,
+                  ),
+                  title: Text(
+                    'guitarkid35@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontFamily: 'Blinker',
+                      fontSize: 18.0,
                     ),
-                    Text(
-                      'guitarkid35@gmail.com',
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontFamily: 'Blinker',
-                        fontSize: 18.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               )
             ],
